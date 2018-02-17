@@ -7,7 +7,7 @@ class Footer extends Component {
         style=  {{
                     
                 }}
-        onClick={ this.props.handleClick }>{ this.props.children }</div>
+        onClick={ this.props.handleClick }>{ this.props.data.webSite }</div>
     );
   }
 };

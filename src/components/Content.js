@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-let styleOjb = {color:'#ffff00', backgroundColor: '#222', border: 'solid #00FFff 2px', borderTopLeftRadius: 5}
-
 class Content extends Component {
   render () {
+    let styleOjb = {color:'#ffff00', backgroundColor: '#222', border: 'solid #00FFff 2px', borderTopLeftRadius: 5};
     return (
         <div>
         {/* style={mediaStyle}>

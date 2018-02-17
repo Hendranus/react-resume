@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import Heading from './Heading';
+import Section from './Section';
+import Footer from './Footer';
 
 class Page extends Component {
   render () {
+    let sections = this.props.sections;
     return (
-      <div style={{ left: -15 }}>
-          <div class="bevel tr"></div>
-          <div class="content">{ this.props.children }</div>
-          <div class="bevel bl"></div>
+      <div>
+        <Heading data={this.props.heading} />
+          { sections ? sections.map( section => <Section data={ section } />) : '' }
+        <Footer data={this.props.footer} />
       </div>
     )
   };
