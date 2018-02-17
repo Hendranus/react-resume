@@ -1,0 +1,39 @@
+{
+  "name": "react-resume",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-backgrounds": "^3.3.13",
+    "@storybook/react": "^3.3.13",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "html-pdf": "^2.2.0",
+    "react-scripts": "1.1.1",
+    "webpack": "^3.11.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "serve": "node ./dist/server",
+    "webpack": "webpack",
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hendranus/react-resume"
+  },
+  "author": "Hendranus Vermeulen <hendranus@gmail.com>",
+  "license": "GPL",
+  "homepage": "https://github.com/Hendranus/react-resume"
+}
