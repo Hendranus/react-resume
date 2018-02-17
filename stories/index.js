@@ -10,18 +10,14 @@ import Section from '../src/components/Section';
 import Content from '../src/components/Content';
 import Title from '../src/components/Title';
 import Footer from '../src/components/Footer';
-import data from '../data/hendranus.json'
+import Resume from '../src/components/Resume';
 
-const heading = data.resume.heading;
-const sections = data.resume.chronology;
-const footer = { fullName: `${heading.name} ${heading.surname}`,  webSite: heading.url };
-
-storiesOf('Page', module)
+storiesOf('Resume', module)
   .addDecorator(backgrounds([
     { name: "default", value: "#fff", default: true }
   ]))
   .add('with text', () => (
-    <Page {...{heading, sections, footer}} />
+    <Resume/>
   ));
 
 storiesOf('Content', module)

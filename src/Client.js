@@ -1,4 +1,4 @@
-const Client = ({ body, styles, title }) => `
+const client = ({ body, title }) => `
   <!DOCTYPE html>
   <html>
     <head>
@@ -10,4 +10,4 @@ const Client = ({ body, styles, title }) => `
   </html>
 `;
 
-export default Client;
+export default client;

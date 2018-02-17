@@ -2,26 +2,21 @@ import express from 'express';
 import React from 'react';
 import ReactDOMServer, { renderToString } from 'react-dom/server';
 import App from './App';
-import Client from './Client';
-import Page from './components/Page'
+import client from './client';
+import Resume from './components/Resume'
 import pdf from 'html-pdf';
 import fs from 'fs';
-import data from '../data/hendranus.json'
-
-const heading = data.resume.heading;
-const sections = data.resume.chronology;
-const footer = { fullName: `${heading.name} ${heading.surname}`,  webSite: heading.url };
 
 const port = 1081;
 const server = express();
 
 server.get('/', (req, res) => {
 
-  const body = renderToString(<App />);
+  const body = renderToString(<Resume/>);
   const title = 'Hendranus Resume';
 
   res.send(
-    Client({
+    client({
       body,
       title
     })
@@ -29,7 +24,7 @@ server.get('/', (req, res) => {
 });
 
 server.get('/print', (req, res) => {
-    let html = ReactDOMServer.renderToStaticMarkup(<Page {...{heading, sections, footer}} />);
+    let html = ReactDOMServer.renderToStaticMarkup(<Resume/>);
     console.log(html)
     var options = { format: 'A4' };
     const downloadPath = 'download/resume.pdf'
